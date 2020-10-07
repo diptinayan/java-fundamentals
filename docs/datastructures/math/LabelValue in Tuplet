@@ -1,0 +1,28 @@
+// Below is a Java program to create 
+// a LabelValue tuple from Collection 
+
+import java.util.*; 
+import org.javatuples.LabelValue; 
+
+class GfG { 
+	public static void main(String[] args) 
+	{ 
+		// Creating LabelValue from List 
+		List<String> list = new ArrayList<String>(); 
+		list.add("GeeksforGeeks"); 
+		list.add("A computer portal"); 
+		LabelValue<String, String> kv 
+			= LabelValue.fromCollection(list); 
+
+		// Creating LabelValue from Array 
+		String[] arr = { "GeeksforGeeks", "A computer portal" }; 
+		LabelValue<String, String> otherLabelValue 
+			= LabelValue.fromArray(arr); 
+
+		System.out.println(kv); 
+		System.out.println(otherLabelValue); 
+	} 
+} 
+Output-
+[GeeksforGeeks, A computer portal]
+[GeeksforGeeks, A computer portal]
